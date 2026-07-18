@@ -31,24 +31,32 @@ flowchart LR
 
 ## Projects
 
-Grouped by how you run them (TUI / CLI / Web) and how they're packaged (Library / Homebrew / Docker).
+| Project | What it is | Tags |
+| --- | --- | --- |
+| [unum](https://github.com/danielriddell21/unum) | JSON, diff & hash dev toolkit | TUI · CLI · Web · 🍺 · 🐳 |
+| [fiat-lux](https://github.com/danielriddell21/fiat-lux) | An AI agent dropped into an empty world with the tools of creation | TUI · CLI · Web · 🍺 · 🐳 |
+| [tracearr](https://github.com/danielriddell21/tracearr) | OpenTelemetry trace middleware for the *arr stack | CLI · 🐳 |
+| [galapagos](https://github.com/danielriddell21/galapagos) | Framework for watching learning algorithms evolve in real time | Lib · CLI · 🍺 |
+| [factorio-mcp](https://github.com/danielriddell21/factorio-mcp) | MCP server that lets an LLM play Factorio 2.0 over RCON | CLI · 🍺 |
+| [pandemonium](https://github.com/danielriddell21/pandemonium) | Procedurally generated, Wolfenstein-3D-style raycaster FPS | CLI · 🍺 |
 
-| Project | What it is | TUI | CLI | Web | Lib | Brew | Docker |
-| --- | --- | :-: | :-: | :-: | :-: | :-: | :-: |
-| [unum](https://github.com/danielriddell21/unum) | Unified dev toolkit: JSON viewer/analyzer, multi-format diff visualizer, deterministic hash deriver | ✅ | ✅ | ✅ | | ✅ | ✅ |
-| [fiat-lux](https://github.com/danielriddell21/fiat-lux) | An AI agent dropped into an empty world with the tools of creation; the world emerges as you watch | ✅ | ✅ | ✅ | | ✅ | ✅ |
-| [toolshed](https://github.com/danielriddell21/toolshed) | Eleven terminal toys in one binary: fractals, self-painting sims, a maze solver, ambient bits | ✅ | ✅ | | | ✅ | |
-| [tracearr](https://github.com/danielriddell21/tracearr) | OpenTelemetry trace middleware for the *arr stack; turns Sonarr/Radarr/download webhooks into end-to-end traces over OTLP | | ✅ | | | | ✅ |
-| [factorio-mcp](https://github.com/danielriddell21/factorio-mcp) | MCP server / Claude Code plugin that lets an LLM play Factorio 2.0 over RCON | | ✅ | | | ✅ | |
-| [galapagos](https://github.com/danielriddell21/galapagos) | Pluggable framework for watching learning algorithms in real time (evolves cars to drive a track) | | ✅ | | ✅ | ✅ | |
-| [gambit](https://github.com/danielriddell21/gambit) | Two chess engines play each other, headless or in a window; a testbed for search strategies | | ✅ | | ✅ | ✅ | |
-| [rubix](https://github.com/danielriddell21/rubix) | Rubik's cube solver: headless core solved nine ways, optional 3D view, LEGO Mindstorms EV3 driver | | ✅ | | ✅ | ✅ | |
-| [hegemony](https://github.com/danielriddell21/hegemony) | Territory-war simulation where competing algorithms fight over a shared grid | | ✅ | | | ✅ | |
-| [vivarium](https://github.com/danielriddell21/vivarium) | 2D ecosystem sim where behaviour evolves through tiny neural nets, mutation and in-life learning | | ✅ | | | ✅ | |
-| [pandemonium](https://github.com/danielriddell21/pandemonium) | Procedurally generated, Wolfenstein-3D-style raycaster FPS on Ebitengine | | ✅ | | | ✅ | |
-| [narrata](https://github.com/danielriddell21/narrata) | Embedded, dependency-free narration runtime; turns data and events into readable text (and speech) | | ✅ | | ✅ | ✅ | |
-| [retrievium](https://github.com/danielriddell21/retrievium) | Generic search algorithms behind one small interface | | | | ✅ | | |
-| [ordinex](https://github.com/danielriddell21/ordinex) | Generic sorting algorithms behind one small interface | | | | ✅ | | |
+<details>
+<summary><b>Everything else…</b></summary>
+
+| Project | What it is | Tags |
+| --- | --- | --- |
+| [toolshed](https://github.com/danielriddell21/toolshed) | Eleven terminal toys in one binary: fractals, sims, a maze solver | TUI · CLI · 🍺 |
+| [hegemony](https://github.com/danielriddell21/hegemony) | Territory-war sim where competing algorithms fight over a grid | CLI · 🍺 |
+| [vivarium](https://github.com/danielriddell21/vivarium) | 2D ecosystem where behaviour evolves through tiny neural nets | CLI · 🍺 |
+| [gambit](https://github.com/danielriddell21/gambit) | Two chess engines play each other; a testbed for search strategies | Lib · CLI · 🍺 |
+| [rubix](https://github.com/danielriddell21/rubix) | Rubik's cube solver, nine ways, with a LEGO Mindstorms EV3 driver | Lib · CLI · 🍺 |
+| [narrata](https://github.com/danielriddell21/narrata) | Embedded, dependency-free narration runtime for Go | Lib · CLI · 🍺 |
+| [retrievium](https://github.com/danielriddell21/retrievium) | Generic search algorithms behind one small interface | Lib |
+| [ordinex](https://github.com/danielriddell21/ordinex) | Generic sorting algorithms behind one small interface | Lib |
+
+</details>
+
+<sub>Tags: TUI · CLI · Web interface · Lib (Go module) · 🍺 Homebrew · 🐳 Docker</sub>
 
 The TUIs are built on [Bubble Tea](https://github.com/charmbracelet/bubbletea); the games and sims
 run on [Ebitengine](https://ebitengine.org). Most CLIs install from my
