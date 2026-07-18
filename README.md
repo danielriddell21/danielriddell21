@@ -34,17 +34,18 @@ flowchart LR
 | Project | What it is | Tags |
 | --- | --- | --- |
 | [unum](https://github.com/danielriddell21/unum) | JSON, diff & hash dev toolkit | TUI · CLI · Web · 🍺 · 🐳 |
-| [fiat-lux](https://github.com/danielriddell21/fiat-lux) | An AI agent dropped into an empty world with the tools of creation | TUI · CLI · Web · 🍺 · 🐳 |
-| [tracearr](https://github.com/danielriddell21/tracearr) | OpenTelemetry trace middleware for the *arr stack | CLI · 🐳 |
-| [galapagos](https://github.com/danielriddell21/galapagos) | Framework for watching learning algorithms evolve in real time | Lib · CLI · 🍺 |
-| [factorio-mcp](https://github.com/danielriddell21/factorio-mcp) | MCP server that lets an LLM play Factorio 2.0 over RCON | CLI · 🍺 |
 | [pandemonium](https://github.com/danielriddell21/pandemonium) | Procedurally generated, Wolfenstein-3D-style raycaster FPS | CLI · 🍺 |
+| [tf-plan-summary-action](https://github.com/danielriddell21/tf-plan-summary-action) | GitHub Action that posts Terraform plan summaries onto PRs | Action |
 
 <details>
 <summary><b>Everything else…</b></summary>
 
 | Project | What it is | Tags |
 | --- | --- | --- |
+| [fiat-lux](https://github.com/danielriddell21/fiat-lux) | An AI agent dropped into an empty world with the tools of creation | TUI · CLI · Web · 🍺 · 🐳 |
+| [tracearr](https://github.com/danielriddell21/tracearr) | OpenTelemetry trace middleware for the *arr stack | CLI · 🐳 |
+| [galapagos](https://github.com/danielriddell21/galapagos) | Framework for watching learning algorithms evolve in real time | Lib · CLI · 🍺 |
+| [factorio-mcp](https://github.com/danielriddell21/factorio-mcp) | MCP server that lets an LLM play Factorio 2.0 over RCON | CLI · 🍺 |
 | [toolshed](https://github.com/danielriddell21/toolshed) | Eleven terminal toys in one binary: fractals, sims, a maze solver | TUI · CLI · 🍺 |
 | [hegemony](https://github.com/danielriddell21/hegemony) | Territory-war sim where competing algorithms fight over a grid | CLI · 🍺 |
 | [vivarium](https://github.com/danielriddell21/vivarium) | 2D ecosystem where behaviour evolves through tiny neural nets | CLI · 🍺 |
@@ -56,7 +57,7 @@ flowchart LR
 
 </details>
 
-<sub>Tags: TUI · CLI · Web interface · Lib (Go module) · 🍺 Homebrew · 🐳 Docker</sub>
+<sub>Tags: TUI · CLI · Web interface · Lib (Go module) · Action (GitHub Action) · 🍺 Homebrew · 🐳 Docker</sub>
 
 The TUIs are built on [Bubble Tea](https://github.com/charmbracelet/bubbletea); the games and sims
 run on [Ebitengine](https://ebitengine.org). Most CLIs install from my
