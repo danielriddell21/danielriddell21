@@ -22,11 +22,16 @@ flowchart LR
     hegemony --> galapagos
     galapagos --> gambit
     galapagos --> rubix
+    tf-plan-summary-action --> unum
 
     classDef game fill:#1f6feb,stroke:#0d1117,color:#fff;
+    classDef tool fill:#862373,stroke:#0d1117,color:#fff;
     classDef lib fill:#238636,stroke:#0d1117,color:#fff;
+    classDef action fill:#863623,stroke:#0d1117,color:#fff;
     class hegemony,galapagos game;
+    class unum tool;
     class gambit,rubix lib;
+    class tf-plan-summary-action action;
 ```
 
 ## Projects
