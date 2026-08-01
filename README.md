@@ -13,9 +13,7 @@ games and simulations — most shipping through my own Homebrew tap, a couple as
 
 ## How the projects fit together
 
-The games and sims now share one engine — **crucible** — instead of each carrying its own copy;
-crucible in turn builds on narrata (narration) and ordinex (sorting). The actual `require` edges
-between my Go modules:
+Built using the `require` edges between my Go modules:
 
 ```mermaid
 flowchart LR
