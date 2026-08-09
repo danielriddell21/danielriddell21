@@ -24,6 +24,7 @@ flowchart LR
     hegemony --> crucible
     gambit --> crucible
     rubix --> crucible
+    autobahn --> crucible
 
     crucible --> narrata
     crucible --> ordinex
@@ -37,7 +38,7 @@ flowchart LR
     classDef tool fill:#862373,stroke:#0d1117,color:#fff;
     classDef lib fill:#238636,stroke:#0d1117,color:#fff;
     classDef action fill:#863623,stroke:#0d1117,color:#fff;
-    class pandemonium,nemesis,vivarium,galapagos,hegemony game;
+    class pandemonium,nemesis,vivarium,galapagos,hegemony,autobahn game;
     class unum tool;
     class gambit,rubix,crucible,narrata,ordinex lib;
     class tf-plan-summary-action action;
@@ -56,6 +57,7 @@ flowchart LR
 
 | Project | What it is | Tags |
 | --- | --- | --- |
+| [autobahn](https://github.com/danielriddell21/autobahn) | 3D driving game with a camera-only autopilot, in a procedural British city | 🖥️ · 🍺 |
 | [fiat-lux](https://github.com/danielriddell21/fiat-lux) | An AI agent dropped into an empty world with the tools of creation | 🖥️ · 🌐 · 🍺 · 🐳 |
 | [tracearr](https://github.com/danielriddell21/tracearr) | OpenTelemetry trace middleware for the *arr stack | 🖥️ · 🐳 |
 | [crucible](https://github.com/danielriddell21/crucible) | Shared Ebitengine engine behind the games: worldgen, raycaster, menus, audio, HUD | 📚 |
@@ -75,8 +77,8 @@ flowchart LR
 
 <sub>Tags: 🖥️ CLI · 🌐 Web · 📚 Library (Go module) · Action (GitHub Action) · 🍺 Homebrew · 🐳 Docker</sub>
 
-The TUIs are built on [Bubble Tea](https://github.com/charmbracelet/bubbletea); the games and sims
-run on [Ebitengine](https://ebitengine.org). Most CLIs install from my
+The TUIs are built on [Bubble Tea](https://github.com/charmbracelet/bubbletea); most games and sims
+run on [Ebitengine](https://ebitengine.org), with autobahn on [raylib](https://www.raylib.com). Most CLIs install from my
 [Homebrew tap](https://github.com/danielriddell21/homebrew-tap):
 
 ```sh
