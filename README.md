@@ -13,7 +13,9 @@ games and simulations — most shipping through my own Homebrew tap, a couple as
 
 ## How the projects fit together
 
-Built using the `require` edges between my Go modules:
+Solid edges are `require` edges between my Go modules. The dotted edge is release-time:
+narrata publishes through [letsgo](https://github.com/danielriddell21/letsgo) rather than
+GoReleaser.
 
 ```mermaid
 flowchart LR
@@ -27,20 +29,23 @@ flowchart LR
     autobahn --> crucible
 
     crucible --> narrata
-    crucible --> ordinex
     hegemony --> galapagos
     galapagos --> gambit
     galapagos --> rubix
 
+    pandemonium --> narrata
+
     tf-plan-summary-action --> unum
+
+    narrata -.-> letsgo
 
     classDef game fill:#1f6feb,stroke:#0d1117,color:#fff;
     classDef tool fill:#862373,stroke:#0d1117,color:#fff;
     classDef lib fill:#238636,stroke:#0d1117,color:#fff;
     classDef action fill:#863623,stroke:#0d1117,color:#fff;
     class pandemonium,nemesis,vivarium,galapagos,hegemony,autobahn game;
-    class unum tool;
-    class gambit,rubix,crucible,narrata,ordinex lib;
+    class unum,letsgo tool;
+    class gambit,rubix,crucible,narrata lib;
     class tf-plan-summary-action action;
 ```
 
@@ -51,6 +56,7 @@ flowchart LR
 | [unum](https://github.com/danielriddell21/unum) | JSON, diff & hash dev toolkit | 🖥️ · 🌐 · 🍺 · 🐳 |
 | [pandemonium](https://github.com/danielriddell21/pandemonium) | Procedurally generated, Wolfenstein-3D-style raycaster FPS | 🖥️ · 🍺 |
 | [tf-plan-summary-action](https://github.com/danielriddell21/tf-plan-summary-action) | GitHub Action that posts Terraform plan summaries onto PRs | Action |
+| [letsgo](https://github.com/danielriddell21/letsgo) | Reproducible release tool for Go, and only Go | 🖥️ |
 
 <details>
 <summary><b>Everything else…</b></summary>
@@ -70,6 +76,8 @@ flowchart LR
 | [gambit](https://github.com/danielriddell21/gambit) | Two chess engines play each other; a testbed for search strategies | 📚 · 🖥️ · 🍺 |
 | [rubix](https://github.com/danielriddell21/rubix) | Rubik's cube solver, nine ways, with a LEGO Mindstorms EV3 driver | 📚 · 🖥️ · 🍺 |
 | [narrata](https://github.com/danielriddell21/narrata) | Embedded, dependency-free narration runtime for Go | 📚 · 🖥️ · 🍺 |
+| [merkelbrot](https://github.com/danielriddell21/merkelbrot) | Zoomable, fractal-style visualiser for Merkle DAGs and trees | 📚 · 🖥️ · 🍺 |
+| [letsgo-action](https://github.com/danielriddell21/letsgo-action) | GitHub Action that installs letsgo and runs it | Action |
 | [retrievium](https://github.com/danielriddell21/retrievium) | Generic search algorithms behind one small interface | 📚 |
 | [ordinex](https://github.com/danielriddell21/ordinex) | Generic sorting algorithms behind one small interface | 📚 |
 
