@@ -119,15 +119,9 @@ infrastructure I keep as Terraform in
 
 ## letsgo
 
-Everything above ships through [letsgo](https://github.com/danielriddell21/letsgo), a
-release tool for Go and nothing else. One `letsgo.mod` per repo says what to build; one
-command builds every target, publishes the release, and writes a `letsgo.json` recording
-the digest of everything it produced.
-
-Go-only is the point. Nothing links C, so a release is reproducible from its commit
-alone — `letsgo verify` rebuilds a published release on any machine and checks the bytes
-match. It also refuses to publish from a dirty worktree, with a known-vulnerable
-dependency, or when the exported API breaks without a major version.
+A release tool for Go, and only Go. One command builds every target and publishes,
+recording digests so `letsgo verify` can rebuild the release anywhere and check the
+bytes match.
 
 [Read more in the wiki →](https://github.com/danielriddell21/letsgo/wiki)
 
