@@ -13,9 +13,9 @@ games and simulations — most shipping through my own Homebrew tap, a couple as
 
 ## How the projects fit together
 
-Solid edges are `require` edges between my Go modules. The dotted edge is release-time:
-narrata publishes through [letsgo](https://github.com/danielriddell21/letsgo) rather than
-GoReleaser.
+### Ecosystem
+
+Solid edges are `require` edges between my Go modules.
 
 ```mermaid
 flowchart LR
@@ -35,18 +35,37 @@ flowchart LR
 
     pandemonium --> narrata
 
-    tf-plan-summary-action --> unum
-
-    narrata -.-> letsgo
-
-    classDef game fill:#1f6feb,stroke:#0d1117,color:#fff;
-    classDef tool fill:#862373,stroke:#0d1117,color:#fff;
+    classDef app fill:#1f6feb,stroke:#0d1117,color:#fff;
     classDef lib fill:#238636,stroke:#0d1117,color:#fff;
-    classDef action fill:#863623,stroke:#0d1117,color:#fff;
-    class pandemonium,nemesis,vivarium,galapagos,hegemony,autobahn game;
-    class unum,letsgo tool;
+    class pandemonium,nemesis,vivarium,galapagos,hegemony,autobahn app;
     class gambit,rubix,crucible,narrata lib;
-    class tf-plan-summary-action action;
+```
+
+### Deployment
+
+Dotted edges are release-time: everything here publishes through
+[letsgo](https://github.com/danielriddell21/letsgo), which releases itself the same way.
+
+```mermaid
+flowchart TD
+    %% Sixteen repos into one sink is a star, which mermaid lays out as a
+    %% single row 2360px wide — unreadable once GitHub scales it down. These
+    %% invisible links (~~~) fold it into three columns instead; they carry no
+    %% meaning beyond layout.
+    autobahn ~~~ galapagos ~~~ letsgo-plugins ~~~ nemesis ~~~ toolshed ~~~ vivarium
+    factorio-mcp ~~~ gambit ~~~ merkelbrot ~~~ pandemonium ~~~ tracearr
+    fiat-lux ~~~ hegemony ~~~ narrata ~~~ rubix ~~~ unum
+
+    autobahn & factorio-mcp & fiat-lux & galapagos -.-> letsgo
+    gambit & hegemony & letsgo-plugins & merkelbrot -.-> letsgo
+    narrata & nemesis & pandemonium & rubix -.-> letsgo
+    toolshed & tracearr & unum & vivarium -.-> letsgo
+
+    classDef ships fill:#863623,stroke:#0d1117,color:#fff;
+    classDef tool fill:#862373,stroke:#0d1117,color:#fff;
+    class autobahn,factorio-mcp,fiat-lux,galapagos,gambit,hegemony,letsgo-plugins,merkelbrot ships;
+    class narrata,nemesis,pandemonium,rubix,toolshed,tracearr,unum,vivarium ships;
+    class letsgo tool;
 ```
 
 ## Projects
@@ -78,6 +97,7 @@ flowchart LR
 | [narrata](https://github.com/danielriddell21/narrata) | Embedded, dependency-free narration runtime for Go | 📚 · 🖥️ · 🍺 |
 | [merkelbrot](https://github.com/danielriddell21/merkelbrot) | Zoomable, fractal-style visualiser for Merkle DAGs and trees | 📚 · 🖥️ · 🍺 |
 | [letsgo-action](https://github.com/danielriddell21/letsgo-action) | GitHub Action that installs letsgo and runs it | Action |
+| [letsgo-plugins](https://github.com/danielriddell21/letsgo-plugins) | Plugins for letsgo: ldflags injection, multi-binary archives, Homebrew casks | 🖥️ |
 | [retrievium](https://github.com/danielriddell21/retrievium) | Generic search algorithms behind one small interface | 📚 |
 | [ordinex](https://github.com/danielriddell21/ordinex) | Generic sorting algorithms behind one small interface | 📚 |
 
@@ -96,6 +116,26 @@ brew install danielriddell21/tap/<tool>
 **unum** and **fiat-lux** also run as web apps at [riddellious.dev](https://riddellious.dev), whose
 infrastructure I keep as Terraform in
 [riddellious-dev](https://github.com/danielriddell21/riddellious-dev).
+
+## letsgo
+
+Everything above ships through [letsgo](https://github.com/danielriddell21/letsgo), a
+release tool for Go and nothing else. One `letsgo.mod` per repo says what to build; one
+command builds every target, publishes the release, and writes a `letsgo.json` recording
+the digest of everything it produced.
+
+Go-only is the point. Nothing links C, so a release is reproducible from its commit
+alone — `letsgo verify` rebuilds a published release on any machine and checks the bytes
+match. It also refuses to publish from a dirty worktree, with a known-vulnerable
+dependency, or when the exported API breaks without a major version.
+
+[Read more in the wiki →](https://github.com/danielriddell21/letsgo/wiki)
+
+| Repo | What it is |
+| --- | --- |
+| [letsgo](https://github.com/danielriddell21/letsgo) | The tool: plan, build, release, verify, diff, tag, yank |
+| [letsgo-action](https://github.com/danielriddell21/letsgo-action) | GitHub Action that installs letsgo and runs it |
+| [letsgo-plugins](https://github.com/danielriddell21/letsgo-plugins) | Plugins: ldflags injection, multi-binary archives, Homebrew casks |
 
 ## Elsewhere
 
