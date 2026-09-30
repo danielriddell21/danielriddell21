@@ -65,9 +65,6 @@ flowchart TD
     class letsgo tool;
 ```
 
-Changes: alphabetical, 3×3 grid, autobahn no longer special. Edges grouped per row.
-```
-
 ## Projects
 
 | Project | What it is | Tags |
