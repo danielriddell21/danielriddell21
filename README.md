@@ -48,24 +48,24 @@ Dotted edges are release-time: everything here publishes through
 
 ```mermaid
 flowchart TD
-    %% Sixteen repos into one sink is a star, which mermaid lays out as a
-    %% single row 2360px wide — unreadable once GitHub scales it down. These
-    %% invisible links (~~~) fold it into three columns instead; they carry no
-    %% meaning beyond layout.
-    autobahn ~~~ galapagos ~~~ letsgo-plugins ~~~ nemesis ~~~ toolshed ~~~ vivarium
-    factorio-mcp ~~~ gambit ~~~ merkelbrot ~~~ pandemonium ~~~ tracearr
-    fiat-lux ~~~ hegemony ~~~ narrata ~~~ rubix ~~~ unum
+    %% Nine repos into one sink lays out as a single wide row. Invisible
+    %% links (~~~) fold it into three rows of three; layout only.
+    autobahn ~~~ galapagos ~~~ gambit
+    hegemony ~~~ narrata ~~~ nemesis
+    pandemonium ~~~ rubix ~~~ vivarium
 
-    autobahn & factorio-mcp & fiat-lux & galapagos -.-> letsgo
-    gambit & hegemony & letsgo-plugins & merkelbrot -.-> letsgo
-    narrata & nemesis & pandemonium & rubix -.-> letsgo
-    toolshed & tracearr & unum & vivarium -.-> letsgo
+    autobahn & galapagos & gambit -.-> letsgo
+    hegemony & narrata & nemesis -.-> letsgo
+    pandemonium & rubix & vivarium -.-> letsgo
 
     classDef ships fill:#863623,stroke:#0d1117,color:#fff;
     classDef tool fill:#862373,stroke:#0d1117,color:#fff;
-    class autobahn,factorio-mcp,fiat-lux,galapagos,gambit,hegemony,letsgo-plugins,merkelbrot ships;
-    class narrata,nemesis,pandemonium,rubix,toolshed,tracearr,unum,vivarium ships;
+    class autobahn,galapagos,gambit,hegemony,narrata ships;
+    class nemesis,pandemonium,rubix,vivarium ships;
     class letsgo tool;
+```
+
+Changes: alphabetical, 3×3 grid, autobahn no longer special. Edges grouped per row.
 ```
 
 ## Projects
