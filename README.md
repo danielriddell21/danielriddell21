@@ -70,15 +70,14 @@ flowchart TD
 | Project | What it is | Tags |
 | --- | --- | --- |
 | [unum](https://github.com/danielriddell21/unum) | JSON, diff & hash dev toolkit | 🖥️ · 🌐 · 🍺 · 🐳 |
-| [pandemonium](https://github.com/danielriddell21/pandemonium) | Procedurally generated, Wolfenstein-3D-style raycaster FPS | 🖥️ · 🍺 |
 | [tf-plan-summary-action](https://github.com/danielriddell21/tf-plan-summary-action) | GitHub Action that posts Terraform plan summaries onto PRs | Action |
 | [letsgo](https://github.com/danielriddell21/letsgo) | Reproducible release tool for Go, and only Go | 🖥️ |
-
 <details>
 <summary><b>Everything else…</b></summary>
 
 | Project | What it is | Tags |
 | --- | --- | --- |
+| [pandemonium](https://github.com/danielriddell21/pandemonium) | Procedurally generated, Wolfenstein-3D-style raycaster FPS | 🖥️ · 🍺 |
 | [autobahn](https://github.com/danielriddell21/autobahn) | 3D driving game with a camera-only autopilot, in a procedural British city | 🖥️ · 🍺 |
 | [fiat-lux](https://github.com/danielriddell21/fiat-lux) | An AI agent dropped into an empty world with the tools of creation | 🖥️ · 🌐 · 🍺 · 🐳 |
 | [tracearr](https://github.com/danielriddell21/tracearr) | OpenTelemetry trace middleware for the *arr stack | 🖥️ · 🐳 |
@@ -93,10 +92,10 @@ flowchart TD
 | [rubix](https://github.com/danielriddell21/rubix) | Rubik's cube solver, nine ways, with a LEGO Mindstorms EV3 driver | 📚 · 🖥️ · 🍺 |
 | [narrata](https://github.com/danielriddell21/narrata) | Embedded, dependency-free narration runtime for Go | 📚 · 🖥️ · 🍺 |
 | [merkelbrot](https://github.com/danielriddell21/merkelbrot) | Zoomable, fractal-style visualiser for Merkle DAGs and trees | 📚 · 🖥️ · 🍺 |
-| [letsgo-action](https://github.com/danielriddell21/letsgo-action) | GitHub Action that installs letsgo and runs it | Action |
-| [letsgo-plugins](https://github.com/danielriddell21/letsgo-plugins) | Plugins for letsgo: ldflags injection, multi-binary archives, Homebrew casks | 🖥️ |
 | [retrievium](https://github.com/danielriddell21/retrievium) | Generic search algorithms behind one small interface | 📚 |
 | [ordinex](https://github.com/danielriddell21/ordinex) | Generic sorting algorithms behind one small interface | 📚 |
+| [letsgo-action](https://github.com/danielriddell21/letsgo-action) | GitHub Action that installs letsgo and runs it | Action |
+| [letsgo-plugins](https://github.com/danielriddell21/letsgo-plugins) | Plugins for letsgo: ldflags injection, multi-binary archives, Homebrew casks | 🖥️ |
 
 </details>
 
